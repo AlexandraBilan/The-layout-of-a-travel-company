@@ -1,0 +1,567 @@
+body {
+    background: url(bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+    font-family: Segoe UI, sans-serif;
+    text-transform: uppercase;
+    overflow-x: hidden;
+}
+
+.plane {
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    animation: plane 20s infinite linear;
+}
+
+.logo {
+    background: url(logo.png);
+    width: 200px;
+    height: 80px;
+    background-size: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.voucher-title {
+    color: #184a6f;
+    font-size: 1.8em;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.voucher-title > p {
+    margin: 5px;
+    margin: 0;
+}
+
+.voucher-title > p:last-child {
+    font-size: 1.2em;
+}
+
+.voucher-title > p span {
+    color: red;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.tree {
+    margin: auto;
+    margin-top: 100px;
+    width: 450px;
+    height: 150px;
+    position: relative;
+}
+
+.tree > img {
+    width: 450px;
+    height: 130px;
+    margin: auto;
+}
+
+.btn {
+    width: 270px;
+    position: absolute;
+    background: url(resort_img/btn.gif);
+    background-size: cover;
+    top: 50px;
+    left: 80px;
+    font-size: 2.5em;
+    font-weight: 900;
+    border: 5px solid #a3532c;
+    border-radius: 5px;
+}
+
+.resort {
+    position: relative;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.resort > fieldset {
+    height: 160px;
+    border: 8px solid #fff;
+    box-shadow: -5px 8px 5px rgba(0, 0, 0, .7);
+    border-radius: 15px;
+}
+
+.first {
+    color: #fff;
+    font-weight: 800;
+    font-size: 2.5em;
+    text-shadow: -3px 3px 1px rgba(0, 0, 0, .8);
+}
+
+.voucher {
+    list-style: none;
+    padding: 0;
+    display: table;
+    width: 100%;
+}
+
+.voucher > li {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+}
+
+.voucher > li > .bg {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+    border: 8px solid #fff;
+    box-shadow: -5px 8px 5px rgba(0, 0, 0, .7);
+}
+
+.icon {
+    position: absolute;
+    width: 120px;
+    top: 100px;
+    left: 90px;
+    z-index: 20;
+}
+
+.icon-coconut {
+    top: 90px;
+    left: 100px;
+}
+
+
+.voucher > li > p {
+    font-weight: 800;
+}
+
+.voucher > li > p:last-child {
+    color: #184a6f;
+    font-size: 1.1em;
+}
+
+.name_tour {
+    color: #fff;
+    text-shadow: -3px 3px 1px rgba(0, 0, 0, .8);
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.turtle {
+    display: block;
+    margin: auto;
+    margin-top: 230px;
+    animation: move_turtle 4s infinite linear;
+}
+
+.footer {
+    font-weight: 800;
+    color: #184a6f;
+    font-size: 2.1em;
+    margin: 20px;
+    text-align: center;
+}
+
+/************Hover********************/
+
+.resort:hover .voucher > li > .bg {
+    transition: .1s ease-out 0.2s;
+    width: 150px;
+    height: 150px;
+}
+
+.resort:hover .voucher > li > .icon {
+    transition: .1s ease-out 0.2s;
+    width: 90px;
+}
+
+.resort:hover .voucher > li > .bg:hover {
+    transition: .1s ease-out 0.2s;
+    width: 180px;
+    height: 180px;
+}
+
+.resort:hover .voucher > li > .bg:hover + .icon {
+    width: 120px;
+}
+
+.btn:hover {
+    box-shadow: 0px 10px 100px rgba(250, 250, 250, .8) inset,
+    5px 5px 100px rgba(250, 250, 250, .8);
+}
+
+.btn:hover + .all_crab,
+.btn:hover + .all_crab > .foot_l {
+    animation-play-state: paused;
+}
+
+.btn:hover + .all_crab > .foot_r {
+    animation: foot_move-right_hover 2s infinite ease-in-out;
+}
+
+.btn:hover + .all_crab > .hand_r {
+    animation: hand-move-right_hover infinite 2s linear;
+}
+
+/*****************При изменении ширины экрана**********************/
+
+@media screen and (max-width: 320px) {
+    body {
+        background: url(bg-mobile.jpg) no-repeat;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .resort {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .voucher {
+        display: block;
+    }
+    .voucher > li {
+        display: inline-block;
+        margin-left: 13%;
+    }
+    .resort,
+    .resort > fieldset {
+        width: 80%;
+        height: inherit;
+    }
+
+}
+
+@media screen and (max-width: 890px) {
+
+    .voucher > li {
+        display: inline-block;
+        margin-left: 3%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .voucher > li {
+        display: inline-block;
+        margin-left: 15%;
+    }
+
+}
+
+/*Полностью сделанный краб с анимацией*/
+
+.all_crab {
+    position: absolute;
+    top: -100px;
+    animation: all_crab_move 6s infinite ease-in-out;
+}
+
+.shell {
+
+    background: url(crab/shell.png);
+    height: 116px;
+    width: 98px;
+    z-index: 10;
+    animation: move-left 3s infinite linear;
+}
+
+.body {
+    background: url(crab/body.png);
+    width: 79px;
+    height: 45px;
+    z-index: 11;
+    position: absolute;
+    bottom: -3px;
+    left: 10px;
+    animation: body_move 5s infinite linear;
+}
+
+.foot_l {
+    background: url(crab/foot-left.png);
+    width: 50px;
+    height: 65px;
+    position: absolute;
+    bottom: -20px;
+    left: -35px;
+    animation: foot_move-left .25s infinite linear;
+}
+
+.foot_r {
+    background: url(crab/foot-right.png);
+    width: 50px;
+    height: 65px;
+    position: absolute;
+    left: 85px;
+    bottom: -20px;
+    animation: foot_move-right .25s infinite linear;
+}
+
+.under_eye_l {
+    background: url(crab/eye-left.png);
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    bottom: 5px;
+    left: 25px;
+    z-index: 50;
+    animation: under_eye_move 3s infinite linear;
+
+}
+
+.under_eye_r {
+    background: url(crab/eye-right.png);
+    position: absolute;
+    width: 20px;
+    height: 17px;
+    z-index: 50;
+    bottom: 5px;
+    left: 53px;
+    animation: under_eye_move 3s infinite linear;
+}
+
+.eye_r {
+    background: url(crab/eye-eye.png);
+    position: absolute;
+    width: 12px;
+    height: 8px;
+    z-index: 55;
+    bottom: 14px;
+    left: 62px;
+    animation: eye_move 3s infinite linear;
+
+}
+
+.eye_l {
+    background: url(crab/eye-eye.png);
+    position: absolute;
+    width: 12px;
+    height: 8px;
+    z-index: 55;
+    bottom: 14px;
+    left: 25px;
+    z-index: 55;
+    animation: eye_move 3s infinite linear;
+}
+
+.hand_l {
+    background: url(crab/hand-left.png);
+    position: absolute;
+    width: 59px;
+    height: 43px;
+    z-index: 100;
+    bottom: -30px;
+    left: -10px;
+    animation: hand-move-left 3s infinite linear;
+}
+
+.hand_r {
+    background: url(crab/hand-right.png);
+    position: absolute;
+    width: 59px;
+    height: 43px;
+    z-index: 100;
+    bottom: -30px;
+    left: 50px;
+    animation: hand-move-right 3s infinite linear;
+}
+
+@keyframes hand-move-left {
+    from {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(5deg)
+    }
+    50% {
+        transform: rotate(10deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes hand-move-right {
+    from {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(-5deg)
+    }
+    50% {
+        transform: rotate(-10deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes foot_move-right {
+    from {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(-40deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes foot_move-left {
+    from {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(40deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes eye_move {
+    from {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(2deg);
+        bottom: 15px;
+    }
+    50% {
+        transform: rotate(5deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes under_eye_move {
+    from {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(2deg);
+        bottom: 6px;
+    }
+    50% {
+        transform: rotate(5deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes body_move {
+    from {
+        bottom: -2px;
+    }
+    to {
+        bottom: -1px;
+    }
+}
+
+@keyframes all_crab_move {
+    from {
+        left: 50px;
+    }
+    50% {
+        left: 220px;
+    }
+    to {
+        left: 50px;
+    }
+}
+
+/******Анимация краба при hover************/
+
+@keyframes foot_move-right_hover {
+    from {
+        bottom: -20px;
+    }
+    5% {
+        bottom: -20px;
+    }
+    10% {
+        transform: rotate(15deg);
+        left: 75px;
+        bottom: -45px;
+    }
+    15% {
+        transform: rotate(15deg);
+        left: 75px;
+        bottom: -35px;
+    }
+    20% {
+        transform: rotate(15deg);
+        left: 75px;
+        bottom: -45px;
+    }
+    30% {
+        bottom: -20px;
+        transform: rotate(0deg);
+        left: 85px;
+    }
+    to {
+        bottom: -20px;
+    }
+}
+
+@keyframes hand-move-right_hover {
+    from {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(-15deg)
+    }
+    50% {
+        transform: rotate(-25deg);
+        bottom: -35px;
+    }
+    75% {
+        transform: rotate(-45deg) bottom: -40px;
+    }
+    to {
+        transform: rotate(-0deg)
+    }
+}
+
+/***********Анимация самолета**************/
+
+@keyframes plane {
+    from {
+        left: -300px;
+    }
+    50% {
+        left: 100%;
+        transform: none
+    }
+    51% {
+        left: 120%;
+        transform: scale(-1, 1);
+    }
+    to {
+        left: -300px;
+        transform: scale(-1, 1)
+    }
+}
+
+/***********Анимация черепахи*************/
+
+@keyframes move_turtle {
+    from {
+        transform: rotate(0deg)
+    }
+    40% {
+        transform: rotate(5deg)
+    }
+    65% {
+        transform: rotate(-5deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
